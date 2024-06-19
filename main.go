@@ -84,6 +84,7 @@ func main() {
 		"segundoApellido": "",
 		"primerNombre":    "",
 		"otrosNombres":    "",
+		"dv":              "",
 	}
 
 	for field, value := range fields {
@@ -93,6 +94,7 @@ func main() {
 			log.Fatal(err)
 		}
 		fmt.Printf("~ Retrieving %s took: %s ~\n", field, time.Since(start))
+		fmt.Printf("~ %s is %v ~\n", field, value)
 	}
 
 	fmt.Println("~ ALL VALUES RETRIEVED AND PRINTED. ~")
